@@ -1,13 +1,26 @@
-<h2>Restaurants</h2>
-<ul>
-  <% @restaurants.each do |restaurant| %>
-  <li>
-    <%= link_to(restaurant.name, restaurant) %> <br>
-    Address: <%= restaurant.address %> <br>
-    Phone No: <%= restaurant.phone_number %> <br>
-    Cuisine: <%= restaurant.category %> <br>
-  </li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="text-center">
+  <div id="bannerimage">
+    <h2>Restaurants</h2>
+    </div>
+  </div>
+</div>
 
-<%= link_to "Create a new restaurant to add to our page!", new_restaurant_path %>
+<div class="container">
+  <div class="text-center">
+    <ul>
+      <% @restaurants.each do |restaurant| %>
+      <li>
+        <%= link_to(restaurant.name, restaurant) %> <br>
+        Address: <%= restaurant.address %> <br>
+        Phone No: <%= restaurant.phone_number %> <br>
+        Cuisine: <%= restaurant.category %> <br>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <%= link_to "Create a new restaurant to add to our page!", new_restaurant_path %>
+</div>
