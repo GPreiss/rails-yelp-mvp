@@ -1,0 +1,13 @@
+<h2>Enter the fields of the restaurant</h2>
+<%= simple_form_for @restaurant do |f| %>
+  <% if @restaurant.errors.any? %>
+    <% @restaurant.errors.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+  <% end %>
+  <%= f.input :name, placeholder: "Enter the restaurant name" %>
+  <%= f.input :address, placeholder: "Enter the address" %>
+  <%= f.input :phone_number, placeholder: "Enter the phone number" %>
+  <%= f.input :category, placeholder: "Enter the type of cuisine(i.e. italian, french, english, etc.)" %>
+  <%= f.submit %>
+<% end %>
